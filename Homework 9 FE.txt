@@ -1,0 +1,132 @@
+1.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+
+
+    <div id="container">
+        <div id="square"></div>
+        <button onclick="changeSquare()">Изменить квадрат</button>
+      </div>
+
+     
+
+<script src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+<script>
+function changeSquare() {
+    var square = document.getElementById('square');
+
+  
+    if (square.style.backgroundColor === 'red' || square.style.backgroundColor === '') {
+      square.style.backgroundColor = 'green';
+      square.style.width = '100px';
+      square.style.height = '100px';
+    } else {
+      square.style.backgroundColor = 'red';
+      square.style.width = '200px';
+      square.style.height = '200px';
+    }
+ 
+  }<script/>
+
+* {
+    padding: o;
+    margin: o;
+    box-sizing: border-box;
+}
+
+
+#square {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: background-color 0.5s, width 0.5s, height 0.5s; /* Анимация перехода */
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+
+
+
+2.<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+
+
+
+
+      <div id="container">
+        <div id="square"></div>
+        <button onclick="changeColor()">Изменить цвет</button>
+      </div>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
+
+
+  let currentColor = 'pink';
+
+  function changeColor() {
+    let square = document.getElementById('square');
+
+    if (currentColor === 'pink') {
+      square.style.backgroundColor = 'blue';
+      currentColor = 'blue';
+    } else {
+      square.style.backgroundColor = 'pink';
+      currentColor = 'pink';
+    }
+
+    console.log('Цвет квадрата:', square.style.backgroundColor);
+  }
+
+* {
+    padding: o;
+    margin: o;
+    box-sizing: border-box;
+}
+
+
+
+
+  #square {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    transition: background-color 0.5s; /* Анимация перехода */
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
